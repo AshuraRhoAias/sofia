@@ -1,260 +1,305 @@
-
 <html>
-	<head>
-		<title>Paradigm Shift by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js"></script>
-		
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-		
-		<!-- SCSS Principal compilado dinámicamente -->
-		<style id="compiled-css">
-			/* El CSS compilado se insertará aquí */
-		</style>
-		
-		<!-- Estilos de respaldo básicos -->
-		<style>
-			body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
-			#wrapper { display: grid; grid-template-columns: 35em 1fr; height: 100vh; }
-			.intro { background: #1e252d; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem; position: relative; }
-			.intro .content { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
-			.intro .image.fill { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.3; }
-			.intro .image.fill img { width: 100%; height: 100%; object-fit: cover; }
-			.intro header { z-index: 2; position: relative; }
-			section:not(.intro) { padding: 2rem; overflow-y: auto; }
-			.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
-			.gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 4px; }
-			.button { background: #007acc; color: white; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; display: inline-block; margin: 0.5rem; }
-			@media (max-width: 768px) { #wrapper { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; } .intro { height: 100vh; } }
-		</style>
-	</head>
-	<body class="is-preload">
+<head>
+	<title>Paradigm Shift by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
 
-		<!-- Wrapper -->
-			<div id="wrapper">
 
-				<!-- Intro -->
-					<section class="intro">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js"></script>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+	<!-- Global CSS -->
+	<link rel="stylesheet" href="asset/global.css" />
+
+	<!-- SCSS Principal compilado dinámicamente -->
+	<style id="compiled-css">
+		/* El CSS compilado se insertará aquí */
+	</style>
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Intro -->
+		<section class="intro" data-section="0">
+			<header>
+				<h1>Paradigm Shift</h1>
+				<p>A free responsive site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> / <a
+						href="https://html5up.net">HTML5 UP</a></p>
+				<ul class="actions">
+					<li><a href="#" class="arrow scrolly" id="nextBtn" onclick="navigateToNext()"><span
+								class="label">Next</span></a></li>
+				</ul>
+			</header>
+			<div class="content">
+				<span class="image fill" data-position="center"><img src="imagenes/cama.jpg" alt="" /></span>
+			</div>
+		</section>
+
+		<!-- Content Container -->
+		<div class="content-container">
+			<div class="sections-slider" id="sectionsSlider">
+
+				<!-- Section 1 -->
+				<div class="section-slide" data-section="1">
+					<section id="first">
 						<header>
-							<h1>Paradigm Shift</h1>
-							<p>A free responsive site template designed by <a href="https://twitter.com/ajlkn">@ajlkn</a> / <a href="https://html5up.net">HTML5 UP</a></p>
-							<ul class="actions">
-								<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
-							</ul>
+							<h2>Magna sed nullam nisl adipiscing</h2>
 						</header>
 						<div class="content">
-							<span class="image fill" data-position="center"><img src="imagenes/cama.jpg" alt="" /></span>
+							<p><strong>Lorem ipsum dolor</strong> sit amet consectetur adipiscing elit. Duis dapibus
+								rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+								per inceptos himenaeos. Etiam tristique libero eu nibh porttitor amet fermentum. Nullam
+								venenatis erat id vehicula ultrices sed ultricies condimentum. Magna sed etiam
+								consequat, et lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero,
+								feugiat magna tempus, sed et lorem adipiscing.</p>
+							<span class="image main"><img src="imagenes/iu.jpg" alt="" /></span>
 						</div>
 					</section>
+				</div>
 
-				<!-- Main Content -->
-				<div>
-					<!-- Section -->
-						<section id="first">
-							<header>
-								<h2>Magna sed nullam nisl adipiscing</h2>
-							</header>
-							<div class="content">
-								<p><strong>Lorem ipsum dolor</strong> sit amet consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor amet fermentum. Nullam venenatis erat id vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat magna tempus, sed et lorem adipiscing.</p>
-								<span class="image main"><img src="imagenes/iu.jpg" alt="" /></span>
-							</div>
-						</section>
+				<!-- Section 2 -->
+				<div class="section-slide" data-section="2">
+					<section>
+						<header>
+							<h2>Feugiat consequat tempus ultrices</h2>
+						</header>
+						<div class="content">
+							<p><strong>Etiam tristique libero</strong> eu nibh porttitor amet fermentum. Nullam
+								venenatis erat id vehicula ultrices sed ultricies condimentum.</p>
+							<ul class="feature-icons">
+								<li class="icon solid fa-laptop">Consequat tempus</li>
+								<li class="icon solid fa-bolt">Etiam adipiscing</li>
+								<li class="icon solid fa-signal">Libero nullam</li>
+								<li class="icon solid fa-cog">Blandit condimentum</li>
+								<li class="icon solid fa-map-marker-alt">Lorem ipsum dolor</li>
+								<li class="icon solid fa-code">Nibh amet venenatis</li>
+							</ul>
+							<p>Vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem
+								adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat magna tempus, sed
+								et lorem adipiscing.</p>
+						</div>
+					</section>
+				</div>
 
-					<!-- Section -->
-						<section>
-							<header>
-								<h2>Feugiat consequat tempus ultrices</h2>
-							</header>
-							<div class="content">
-								<p><strong>Etiam tristique libero</strong> eu nibh porttitor amet fermentum. Nullam venenatis erat id vehicula ultrices sed ultricies condimentum.</p>
-								<ul class="feature-icons">
-									<li class="icon solid fa-laptop">Consequat tempus</li>
-									<li class="icon solid fa-bolt">Etiam adipiscing</li>
-									<li class="icon solid fa-signal">Libero nullam</li>
-									<li class="icon solid fa-cog">Blandit condimentum</li>
-									<li class="icon solid fa-map-marker-alt">Lorem ipsum dolor</li>
-									<li class="icon solid fa-code">Nibh amet venenatis</li>
-								</ul>
-								<p>Vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat magna tempus, sed et lorem adipiscing.</p>
-							</div>
-						</section>
+				<!-- Section 3 -->
+				<div class="section-slide" data-section="3">
+					<section>
+						<header>
+							<h2>Ultrices erat magna sed condimentum</h2>
+						</header>
+						<div class="content">
+							<p><strong>Integer mollis egestas</strong> nam maximus erat id euismod egestas. Pellentesque
+								sapien ac quam. Lorem ipsum dolor sit nullam.</p>
 
-					<!-- Section -->
-						<section>
-							<header>
-								<h2>Ultrices erat magna sed condimentum</h2>
-							</header>
-							<div class="content">
-								<p><strong>Integer mollis egestas</strong> nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-
-								<!-- Section -->
-									<section>
-										<header>
-											<h3>Erat aliquam</h3>
-											<p>Vehicula ultrices dolor amet ultricies et condimentum. Magna sed etiam consequat, et lorem adipiscing sed dolor sit amet, consectetur amet do eiusmod tempor incididunt  ipsum suspendisse ultrices gravida.</p>
-										</header>
-										<div class="content">
-											<div class="gallery">
-												<a href="imagenes/mkmk.jpg" class="landscape"><img src="imagenes/mkmk.jpg" alt="" /></a>
-												<a href="imagenes/nj.jpg"><img src="imagenes/nj.jpg" alt="" /></a>
-												<a href="imagenes/tt.jpg"><img src="imagenes/tt.jpg" alt="" /></a>
-												<a href="imagenes/we.jpg" class="landscape"><img src="imagenes/we.jpg" alt="" /></a>
-											</div>
-										</div>
-									</section>
-
-								<!-- Section -->
-									<section>
-										<header>
-											<h3>Nisl consequat</h3>
-											<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam sed facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet mauris. Ut magna finibus nisi nec lacinia ipsum maximus.</p>
-										</header>
-										<div class="content">
-											<div class="gallery">
-												<a href="imagenes/wer.jpg" class="landscape"><img src="imagenes/wer.jpg" alt="" /></a>
-												<a href="imagenes/li.jpg"><img src="imagenes/li.jpg" alt="" /></a>
-												<a href="imagenes/m.jpg"><img src="imagenes/m.jpg" alt="" /></a>
-											</div>
-										</div>
-									</section>
-
-								<!-- Section -->
-									<section>
-										<header>
-											<h3>Lorem gravida</h3>
-											<p>Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aenean ornare velit lacus, ac varius sed enim lorem ullamcorper dolore.  ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis.</p>
-										</header>
-										<div class="content">
-											<div class="gallery">
-												<a href="imagenes/cici.jpg" class="portrait"><img src="imagenes/cici.jpg" alt="" /></a>
-												<a href="imagenes/jnjnjn.jpg" class="portrait"><img src="imagenes/jnjnjn.jpg" alt="" /></a>
-												<a href="imagenes/qamksmkm.jpg" class="landscape"><img src="imagenes/qamksmkm.jpg" alt="" /></a>
-											</div>
-										</div>
-									</section>
-
-							</div>
-						</section>
-
-					<!-- Section -->
-						<section>
-							<header>
-								<h2>Duis sed adpiscing veroeros amet</h2>
-							</header>
-							<div class="content">
-								<p><strong>Proin tempus feugiat</strong> sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.</p>
-								<ul class="actions">
-									<li><a href="#" class="button primary large">Get Started</a></li>
-									<li><a href="#" class="button large">Learn More</a></li>
-								</ul>
-							</div>
-						</section>
-
-					<!-- Section -->
-						<section>
-							<header>
-								<h2>Get in touch</h2>
-							</header>
-							<div class="content">
-								<p><strong>Auctor commodo</strong> interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis.</p>
-								<form>
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="name" id="name" placeholder="Name" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" id="email" placeholder="Email" />
-										</div>
-										<div class="field">
-											<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
-										</div>
+							<!-- Section -->
+							<section>
+								<header>
+									<h3>Erat aliquam</h3>
+									<p>Vehicula ultrices dolor amet ultricies et condimentum. Magna sed etiam consequat,
+										et lorem adipiscing sed dolor sit amet, consectetur amet do eiusmod tempor
+										incididunt ipsum suspendisse ultrices gravida.</p>
+								</header>
+								<div class="content">
+									<div class="gallery">
+										<a href="imagenes/mkmk.jpg" class="landscape"><img src="imagenes/mkmk.jpg"
+												alt="" /></a>
+										<a href="imagenes/nj.jpg"><img src="imagenes/nj.jpg" alt="" /></a>
+										<a href="imagenes/tt.jpg"><img src="imagenes/tt.jpg" alt="" /></a>
+										<a href="imagenes/we.jpg" class="landscape"><img src="imagenes/we.jpg"
+												alt="" /></a>
 									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="button primary" /></li>
-									</ul>
-								</form>
-							</div>
-							<footer>
-								<ul class="items">
-									<li>
-										<h3>Email</h3>
-										<a href="#">information@untitled.ext</a>
-									</li>
-									<li>
-										<h3>Phone</h3>
-										<a href="#">(000) 000-0000</a>
-									</li>
-									<li>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road, Nashville, TN 00000</span>
-									</li>
-									<li>
-										<h3>Elsewhere</h3>
-										<ul class="icons">
-											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-											<li><a href="#" class="icon brands fa-codepen"><span class="label">Codepen</span></a></li>
-										</ul>
-									</li>
+								</div>
+							</section>
+
+							<!-- Section -->
+							<section>
+								<header>
+									<h3>Nisl consequat</h3>
+									<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam sed
+										facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor
+										magna ullamcorper, amet mauris. Ut magna finibus nisi nec lacinia ipsum maximus.
+									</p>
+								</header>
+								<div class="content">
+									<div class="gallery">
+										<a href="imagenes/wer.jpg" class="landscape"><img src="imagenes/wer.jpg"
+												alt="" /></a>
+										<a href="imagenes/li.jpg"><img src="imagenes/li.jpg" alt="" /></a>
+										<a href="imagenes/m.jpg"><img src="imagenes/m.jpg" alt="" /></a>
+									</div>
+								</div>
+							</section>
+
+							<!-- Section -->
+							<section>
+								<header>
+									<h3>Lorem gravida</h3>
+									<p>Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aenean
+										ornare velit lacus, ac varius sed enim lorem ullamcorper dolore. ac varius enim
+										lorem ullamcorper dolore. Proin aliquam facilisis.</p>
+								</header>
+								<div class="content">
+									<div class="gallery">
+										<a href="imagenes/cici.jpg" class="portrait"><img src="imagenes/cici.jpg"
+												alt="" /></a>
+										<a href="imagenes/jnjnjn.jpg" class="portrait"><img src="imagenes/jnjnjn.jpg"
+												alt="" /></a>
+										<a href="imagenes/qamksmkm.jpg" class="landscape"><img
+												src="imagenes/qamksmkm.jpg" alt="" /></a>
+									</div>
+								</div>
+							</section>
+
+						</div>
+					</section>
+				</div>
+
+				<!-- Section 4 -->
+				<div class="section-slide" data-section="4">
+					<section>
+						<header>
+							<h2>Duis sed adpiscing veroeros amet</h2>
+						</header>
+						<div class="content">
+							<p><strong>Proin tempus feugiat</strong> sed varius enim lorem ullamcorper dolore aliquam
+								aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.</p>
+							<ul class="actions">
+								<li><a href="#" class="button primary large">Get Started</a></li>
+								<li><a href="#" class="button large">Learn More</a></li>
+							</ul>
+						</div>
+					</section>
+				</div>
+
+				<!-- Section 5 -->
+				<div class="section-slide" data-section="5">
+					<section>
+						<header>
+							<h2>Get in touch</h2>
+						</header>
+						<div class="content">
+							<p><strong>Auctor commodo</strong> interdum et malesuada fames ac ante ipsum primis in
+								faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis.</p>
+							<form>
+								<div class="fields">
+									<div class="field half">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="button primary" /></li>
 								</ul>
-							</footer>
-						</section>
+							</form>
+						</div>
+						<footer>
+							<ul class="items">
+								<li>
+									<h3>Email</h3>
+									<a href="#">information@untitled.ext</a>
+								</li>
+								<li>
+									<h3>Phone</h3>
+									<a href="#">(000) 000-0000</a>
+								</li>
+								<li>
+									<h3>Address</h3>
+									<span>1234 Somewhere Road, Nashville, TN 00000</span>
+								</li>
+								<li>
+									<h3>Elsewhere</h3>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span
+													class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span
+													class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span
+													class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-linkedin-in"><span
+													class="label">LinkedIn</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span
+													class="label">GitHub</span></a></li>
+										<li><a href="#" class="icon brands fa-codepen"><span
+													class="label">Codepen</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</footer>
+					</section>
 
 					<!-- Copyright -->
-						<div class="copyright">&copy; Untitled. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</div>
+					<div class="copyright">&copy; Untitled. All rights reserved. Design: <a
+							href="https://html5up.net">HTML5 UP</a>.</div>
 				</div>
 
 			</div>
+		</div>
 
-		<!-- Scripts -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		
-		<!-- Script para compilar SCSS dinámicamente -->
-		<script>
-			// Función para cargar y compilar SCSS
-			async function loadAndCompileSCSS() {
-				try {
-					// Lista de archivos SCSS a cargar
-					const scssFiles = [
-						'asset/_vars.scss',
-						'asset/_functions.scss',
-						'asset/_mixins.scss',
-						'asset/_breakpoints.scss',
-						'asset/_reset.scss',
-						'asset/_page.scss',
-						'asset/_typography.scss',
-						'asset/_button.scss',
-						'asset/_form.scss',
-						'asset/_icon.scss',
-						'asset/_icons.scss',
-						'asset/_list.scss',
-						'asset/_actions.scss',
-						'asset/_arrow.scss',
-						'asset/_box.scss',
-						'asset/_contact-icons.scss',
-						'asset/_grid-icons.scss',
-						'asset/_page-wrapper.scss',
-						'asset/_panel-banner.scss',
-						'asset/_panel-spotlight.scss',
-						'asset/_panel.scss',
-						'asset/_table.scss',
-						'asset/_vendor.scss',
-						'asset/_wrapper.scss',
-						'imagenes/_gallery.scss',
-						'imagenes/_image.scss'
-					];
+	</div>
 
-					// SCSS principal que importa todos los archivos
-					let mainScss = `
+	<!-- Scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+	<!-- Script para navegación horizontal y compilación SCSS -->
+	<script>
+		// Variables globales para navegación
+		let currentSection = 0;
+		let totalSections = 6;
+
+		// Función para navegar a la siguiente sección
+		function navigateToNext() {
+			const nextSection = currentSection + 1;
+
+			if (nextSection < totalSections) {
+				currentSection = nextSection;
+				slideToSection(currentSection);
+				updateButton();
+			}
+		}
+
+		// Función para deslizar horizontalmente a la sección
+		function slideToSection(sectionNumber) {
+			const slider = document.getElementById('sectionsSlider');
+			if (slider) {
+				if (sectionNumber === 0) {
+					// Mostrar intro, resetear slider
+					slider.style.transform = 'translateX(0%)';
+				} else {
+					// Mover slider para mostrar la sección correspondiente
+					const translateX = -((sectionNumber - 1) * 100);
+					slider.style.transform = `translateX(${translateX}%)`;
+				}
+			}
+		}
+
+		// Función para actualizar el botón
+		function updateButton() {
+			const nextBtn = document.getElementById('nextBtn');
+
+			// Ocultar botón cuando llegue a la última sección
+			if (currentSection === totalSections - 1) {
+				nextBtn.style.opacity = '0.3';
+				nextBtn.style.pointerEvents = 'none';
+			}
+		}
+
+		// Función para cargar y compilar SCSS
+		async function loadAndCompileSCSS() {
+			try {
+				let mainScss = `
 					// Variables principales
 					$color-accent: #007acc;
 					$color-bg: #ffffff;
@@ -285,25 +330,20 @@
 						line-height: 1.75;
 						color: $color-fg;
 						background: $color-bg;
-					}
-					
-					// Grid principal
-					#wrapper {
-						display: grid;
-						grid-template-columns: 35em 1fr;
-						height: 100vh;
 						overflow: hidden;
-						
-						@media screen and (max-width: 980px) {
-							grid-template-columns: 1fr;
-							grid-template-rows: auto;
-							height: auto;
-						}
 					}
 					
-					// Sección intro
+					// Wrapper principal (horizontal)
+					#wrapper {
+						display: flex;
+						height: 100vh;
+						width: 100vw;
+						overflow: hidden;
+					}
+					
+					// Sección intro (fija a la izquierda)
 					.intro {
-						background: #1e252d;
+						background: linear-gradient(135deg, #1e252d 0%, #2c3e50 100%);
 						color: #ffffff;
 						display: flex;
 						flex-direction: column;
@@ -312,6 +352,15 @@
 						text-align: center;
 						position: relative;
 						padding: 2rem;
+						width: 35em;
+						min-width: 35em;
+						flex-shrink: 0;
+						
+						@media screen and (max-width: 980px) {
+							width: 100%;
+							min-width: auto;
+							height: 100vh;
+						}
 						
 						header {
 							z-index: 2;
@@ -324,12 +373,13 @@
 							font-weight: 900;
 							margin-bottom: 1rem;
 							line-height: 1.2;
+							text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 						}
 						
 						p {
 							font-size: 1.1rem;
 							margin-bottom: 2rem;
-							opacity: 0.8;
+							opacity: 0.9;
 						}
 						
 						.content {
@@ -347,7 +397,7 @@
 							left: 0;
 							width: 100%;
 							height: 100%;
-							opacity: 0.3;
+							opacity: 0.2;
 							
 							img {
 								width: 100%;
@@ -357,33 +407,81 @@
 						}
 					}
 					
-					// Contenido principal
-					#wrapper > div {
-						overflow-y: auto;
-						padding: 3rem;
-						height: 100vh;
+					// Contenedor de contenido (deslizable)
+					.content-container {
+						flex: 1;
+						overflow: hidden;
+						position: relative;
 						
 						@media screen and (max-width: 980px) {
+							height: auto;
+						}
+					}
+					
+					// Slider horizontal
+					.sections-slider {
+						display: flex;
+						height: 100%;
+						@include vendor(transition, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1));
+						
+						@media screen and (max-width: 980px) {
+							flex-direction: column;
+							height: auto;
+						}
+					}
+					
+					// Slides de secciones
+					.section-slide {
+						min-width: 100%;
+						width: 100%;
+						padding: 3rem;
+						overflow-y: auto;
+						flex-shrink: 0;
+						background: $color-bg;
+						
+						@media screen and (max-width: 980px) {
+							min-width: auto;
+							width: 100%;
 							height: auto;
 							overflow-y: visible;
 							padding: 2rem;
 						}
+						
+						// Animación de entrada
+						opacity: 0.95;
+						@include vendor(transition, opacity 0.3s ease);
+						
+						&:hover {
+							opacity: 1;
+						}
 					}
 					
-					// Secciones
+					// Secciones internas
 					section {
-						margin-bottom: 3rem;
+						margin-bottom: 4rem;
 						
 						header {
 							margin-bottom: 2rem;
 						}
 						
 						h2 {
-							font-size: 2rem;
+							font-size: 2.2rem;
 							font-weight: $font-weight-bold;
 							color: #1e252d;
 							margin-bottom: 1rem;
 							line-height: 1.3;
+							position: relative;
+							
+							&:after {
+								content: '';
+								position: absolute;
+								bottom: -0.5rem;
+								left: 0;
+								width: 60px;
+								height: 3px;
+								background: linear-gradient(90deg, $color-accent, lighten($color-accent, 20%));
+								border-radius: 2px;
+							}
 						}
 						
 						h3 {
@@ -399,11 +497,20 @@
 						&.main {
 							display: block;
 							margin: 2rem 0;
+							border-radius: 12px;
+							overflow: hidden;
+							box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+							@include vendor(transition, transform 0.3s ease);
+							
+							&:hover {
+								@include vendor(transform, translateY(-5px));
+								box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+							}
 							
 							img {
 								width: 100%;
 								height: auto;
-								border-radius: 8px;
+								display: block;
 							}
 						}
 					}
@@ -411,7 +518,7 @@
 					// Iconos de características
 					.feature-icons {
 						display: grid;
-						grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+						grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 						gap: 1.5rem;
 						list-style: none;
 						margin: 2rem 0;
@@ -420,13 +527,17 @@
 						li {
 							display: flex;
 							align-items: center;
-							padding: 1rem;
-							background: #f8f9fa;
-							border-radius: 8px;
-							@include vendor(transition, transform 0.2s ease);
+							padding: 1.5rem;
+							background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+							border-radius: 12px;
+							box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+							@include vendor(transition, all 0.3s ease);
+							border: 1px solid rgba(0,0,0,0.05);
 							
 							&:hover {
-								@include vendor(transform, translateY(-2px));
+								@include vendor(transform, translateY(-3px));
+								box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+								border-color: rgba($color-accent, 0.2);
 							}
 						}
 						
@@ -435,25 +546,27 @@
 							font-size: 1.5rem;
 							color: $color-accent;
 							min-width: 2rem;
+							text-shadow: 0 2px 5px rgba(0,0,0,0.1);
 						}
 					}
 					
 					// Galería
 					.gallery {
 						display: grid;
-						grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-						gap: 1rem;
+						grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+						gap: 1.5rem;
 						margin: 2rem 0;
 						
 						a {
 							display: block;
-							border-radius: 8px;
+							border-radius: 12px;
 							overflow: hidden;
-							@include vendor(transition, all 0.2s ease);
+							@include vendor(transition, all 0.3s ease);
+							box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 							
 							&:hover {
-								@include vendor(transform, scale(1.05));
-								box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+								@include vendor(transform, scale(1.02) translateY(-5px));
+								box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 							}
 							
 							&.landscape {
@@ -467,41 +580,50 @@
 						
 						img {
 							width: 100%;
-							height: 200px;
+							height: 220px;
 							object-fit: cover;
 							display: block;
+							@include vendor(transition, transform 0.3s ease);
+						}
+						
+						a:hover img {
+							@include vendor(transform, scale(1.05));
 						}
 						
 						.portrait img {
-							height: 300px;
+							height: 320px;
 						}
 					}
 					
 					// Botones
 					.button {
 						display: inline-block;
-						background: $color-accent;
+						background: linear-gradient(135deg, $color-accent 0%, darken($color-accent, 10%) 100%);
 						color: #ffffff;
 						text-decoration: none;
-						padding: 0.75rem 2rem;
-						border-radius: 6px;
+						padding: 0.8rem 2.2rem;
+						border-radius: 8px;
 						font-weight: 600;
 						font-size: 0.9rem;
 						text-transform: uppercase;
 						letter-spacing: 0.5px;
-						@include vendor(transition, all 0.2s ease);
-						border: 2px solid $color-accent;
+						@include vendor(transition, all 0.3s ease);
+						border: none;
 						cursor: pointer;
+						box-shadow: 0 4px 15px rgba($color-accent, 0.3);
 						
 						&:hover {
-							background: darken($color-accent, 10%);
-							border-color: darken($color-accent, 10%);
-							@include vendor(transform, translateY(-1px));
+							@include vendor(transform, translateY(-2px));
+							box-shadow: 0 6px 20px rgba($color-accent, 0.4);
 						}
 						
 						&.large {
-							padding: 1rem 2.5rem;
+							padding: 1.1rem 2.8rem;
 							font-size: 1rem;
+						}
+						
+						&.primary {
+							background: linear-gradient(135deg, $color-accent 0%, lighten($color-accent, 10%) 100%);
 						}
 					}
 					
@@ -551,7 +673,7 @@
 						.fields {
 							display: grid;
 							grid-template-columns: 1fr 1fr;
-							gap: 1rem;
+							gap: 1.5rem;
 							
 							@media screen and (max-width: 736px) {
 								grid-template-columns: 1fr;
@@ -580,22 +702,24 @@
 						input[type="email"],
 						textarea {
 							width: 100%;
-							padding: 0.75rem;
+							padding: 1rem;
 							border: 2px solid $color-border;
-							border-radius: 6px;
+							border-radius: 8px;
 							font-size: 1rem;
 							font-family: inherit;
-							@include vendor(transition, border-color 0.2s ease);
+							@include vendor(transition, all 0.3s ease);
+							background: #ffffff;
 							
 							&:focus {
 								outline: none;
 								border-color: $color-accent;
+								box-shadow: 0 0 0 3px rgba($color-accent, 0.1);
 							}
 						}
 						
 						textarea {
 							resize: vertical;
-							min-height: 120px;
+							min-height: 140px;
 						}
 					}
 					
@@ -603,12 +727,12 @@
 					footer {
 						margin-top: 3rem;
 						padding-top: 2rem;
-						border-top: 1px solid $color-border;
+						border-top: 2px solid rgba($color-border, 0.5);
 						
 						.items {
 							list-style: none;
 							display: grid;
-							grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+							grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 							gap: 2rem;
 							padding: 0;
 							margin: 0;
@@ -616,8 +740,9 @@
 						
 						h3 {
 							font-size: 1.1rem;
-							margin-bottom: 0.5rem;
+							margin-bottom: 0.8rem;
 							color: #1e252d;
+							font-weight: 600;
 						}
 						
 						.icons {
@@ -631,18 +756,20 @@
 								display: flex;
 								align-items: center;
 								justify-content: center;
-								width: 40px;
-								height: 40px;
-								background: #f0f0f0;
+								width: 45px;
+								height: 45px;
+								background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%);
 								color: #666;
 								border-radius: 50%;
 								text-decoration: none;
-								@include vendor(transition, all 0.2s ease);
+								@include vendor(transition, all 0.3s ease);
+								box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 								
 								&:hover {
-									background: $color-accent;
+									background: linear-gradient(135deg, $color-accent 0%, lighten($color-accent, 10%) 100%);
 									color: #ffffff;
-									@include vendor(transform, translateY(-2px));
+									@include vendor(transform, translateY(-3px));
+									box-shadow: 0 4px 15px rgba($color-accent, 0.3);
 								}
 							}
 						}
@@ -650,16 +777,22 @@
 					
 					// Copyright
 					.copyright {
-						background: #1e252d;
+						background: linear-gradient(135deg, #1e252d 0%, #2c3e50 100%);
 						color: #ffffff;
 						text-align: center;
-						padding: 1rem;
+						padding: 1.5rem;
 						font-size: 0.9rem;
-						opacity: 0.8;
+						opacity: 0.9;
+						margin-top: 2rem;
 						
 						a {
 							color: $color-accent;
 							text-decoration: none;
+							@include vendor(transition, color 0.3s ease);
+							
+							&:hover {
+								color: lighten($color-accent, 15%);
+							}
 						}
 					}
 					
@@ -672,7 +805,7 @@
 					a {
 						color: $color-accent;
 						text-decoration: none;
-						@include vendor(transition, color 0.2s ease);
+						@include vendor(transition, color 0.3s ease);
 						
 						&:hover {
 							color: darken($color-accent, 15%);
@@ -681,7 +814,6 @@
 					
 					// Animaciones de carga
 					body.is-preload {
-						overflow: hidden;
 						
 						* {
 							@include vendor(animation, none !important);
@@ -689,53 +821,93 @@
 						}
 					}
 					
-					// Scroll suave
-					html {
-						scroll-behavior: smooth;
+					// Responsive para móviles
+					@media screen and (max-width: 980px) {
+						#wrapper {
+							flex-direction: column;
+							height: auto;
+							overflow-y: auto;
+						}
+						
+						.intro {
+							width: 100%;
+							min-width: auto;
+							height: 100vh;
+						}
+						
+						.content-container {
+							height: auto;
+						}
+						
+						.sections-slider {
+							flex-direction: column;
+							height: auto;
+							transform: none !important;
+						}
+						
+						.section-slide {
+							min-width: auto;
+							width: 100%;
+							height: auto;
+							overflow-y: visible;
+						}
+					}
+					
+					// Animaciones de entrada
+					@keyframes slideInRight {
+						from {
+							opacity: 0;
+							@include vendor(transform, translateX(30px));
+						}
+						to {
+							opacity: 1;
+							@include vendor(transform, translateX(0));
+						}
+					}
+					
+					.section-slide {
+						@include vendor(animation, slideInRight 0.6s ease-out);
 					}
 					`;
 
-					console.log('Compilando SCSS...');
-					// Usar el compilador SCSS del CDN
-					if (typeof Sass !== 'undefined') {
-						Sass.compile(mainScss, function(result) {
-							if (result.status === 0) {
-								document.getElementById('compiled-css').innerHTML = result.text;
-								console.log('SCSS compilado exitosamente');
-							} else {
-								console.error('Error compilando SCSS:', result.formatted);
-							}
-						});
-					}
-				} catch (error) {
-					console.error('Error cargando SCSS:', error);
-				}
-			}
-
-			// Cargar SCSS cuando la página esté lista
-			document.addEventListener('DOMContentLoaded', function() {
-				// Remover clase de precarga después de un momento
-				setTimeout(function() {
-					document.body.classList.remove('is-preload');
-				}, 1000);
-				
-				// Cargar y compilar SCSS
-				loadAndCompileSCSS();
-				
-				// Smooth scrolling para enlaces anchor
-				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-					anchor.addEventListener('click', function (e) {
-						e.preventDefault();
-						const target = document.querySelector(this.getAttribute('href'));
-						if (target) {
-							target.scrollIntoView({
-								behavior: 'smooth',
-								block: 'start'
-							});
+				console.log('Compilando SCSS...');
+				if (typeof Sass !== 'undefined') {
+					Sass.compile(mainScss, function (result) {
+						if (result.status === 0) {
+							document.getElementById('compiled-css').innerHTML = result.text;
+							console.log('SCSS compilado exitosamente');
+						} else {
+							console.error('Error compilando SCSS:', result.formatted);
 						}
 					});
-				});
+				}
+			} catch (error) {
+				console.error('Error cargando SCSS:', error);
+			}
+		}
+
+		// Inicializar cuando la página esté lista
+		document.addEventListener('DOMContentLoaded', function () {
+			// Remover clase de precarga
+			setTimeout(function () {
+				document.body.classList.remove('is-preload');
+			}, 1000);
+
+			// Cargar y compilar SCSS
+			loadAndCompileSCSS();
+
+			// Inicializar posición
+			slideToSection(0);
+
+			// Agregar listener para tecla derecha
+			document.addEventListener('keydown', function (e) {
+				if (e.key === 'ArrowRight') {
+					e.preventDefault();
+					navigateToNext();
+				}
 			});
-		</script>
-	</body>
+		});
+	</script>
+</body>
+
 </html>
