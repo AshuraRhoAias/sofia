@@ -1,0 +1,49 @@
+/*
+	Paradigm Shift by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+// Importaciones de archivos SCSS parciales en el orden correcto
+
+// 1. Variables y configuración
+@import 'asset/vars';
+@import 'asset/functions';
+@import 'asset/mixins';
+@import 'asset/breakpoints';
+
+// 2. Base y reset
+@import 'asset/reset';
+@import 'asset/page';
+@import 'asset/typography';
+
+// 3. Componentes principales
+@import 'asset/button';
+@import 'asset/form';
+@import 'asset/icon';
+@import 'asset/icons';
+@import 'asset/list';
+@import 'asset/table';
+
+// 4. Elementos de layout
+@import 'asset/actions';
+@import 'asset/arrow';
+@import 'asset/box';
+@import 'asset/wrapper';
+@import 'asset/page-wrapper';
+
+// 5. Paneles y secciones
+@import 'asset/panel';
+@import 'asset/panel-banner';
+@import 'asset/panel-spotlight';
+
+// 6. Iconos especiales
+@import 'asset/contact-icons';
+@import 'asset/grid-icons';
+
+// 7. Galería e imágenes (desde la carpeta imagenes)
+@import 'imagenes/gallery';
+@import 'imagenes/image';
+
+// 8. Vendor y librerías externas
+@import 'asset/vendor';

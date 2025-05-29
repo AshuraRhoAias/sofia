@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<!--
+	Paradigm Shift by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Sofia - Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Sofia's Portfolio" />
+		<meta name="keywords" content="portfolio, photography, design" />
+		<!-- CSS básico temporal mientras compilas los SCSS -->
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			
+			body {
+				font-family: 'Source Sans Pro', Helvetica, sans-serif;
+				line-height: 1.6;
+				color: #ffffff;
+				background: #2e2b37;
+				overflow-x: hidden;
+			}
+			
+			#wrapper {
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+			}
+			
+			.intro {
+				padding: 4rem 2rem;
+				text-align: center;
+				background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('imagenes/cama.jpg');
+				background-size: cover;
+				background-position: center;
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			
+			.intro h1 {
+				font-size: 3rem;
+				margin-bottom: 1rem;
+				color: #fff;
+			}
+			
+			.intro p {
+				font-size: 1.2rem;
+				margin-bottom: 2rem;
+				color: rgba(255,255,255,0.8);
+			}
+			
+			section {
+				padding: 3rem 2rem;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			
+			h2 {
+				font-size: 2rem;
+				margin-bottom: 1.5rem;
+				color: #fff;
+			}
+			
+			h3 {
+				font-size: 1.5rem;
+				margin-bottom: 1rem;
+				color: #fff;
+			}
+			
+			p {
+				margin-bottom: 1.5rem;
+				color: rgba(255,255,255,0.8);
+			}
+			
+			.gallery {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 1rem;
+				margin: 2rem 0;
+			}
+			
+			.gallery img {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+				border-radius: 8px;
+				transition: transform 0.3s ease;
+			}
+			
+			.gallery img:hover {
+				transform: scale(1.05);
+			}
+			
+			.feature-icons {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 1.5rem;
+				list-style: none;
+				margin: 2rem 0;
+			}
+			
+			.feature-icons li {
+				padding: 1rem;
+				background: rgba(255,255,255,0.1);
+				border-radius: 8px;
+				text-align: center;
+			}
+			
+			.button {
+				display: inline-block;
+				padding: 0.8rem 2rem;
+				background: #726193;
+				color: white;
+				text-decoration: none;
+				border-radius: 4px;
+				margin: 0.5rem;
+				transition: background 0.3s ease;
+			}
+			
+			.button:hover {
+				background: #5a4e75;
+			}
+			
+			.button.primary {
+				background: #e37b7c;
+			}
+			
+			.button.primary:hover {
+				background: #d96566;
+			}
+			
+			.actions {
+				list-style: none;
+				text-align: center;
+				margin: 2rem 0;
+			}
+			
+			.actions li {
+				display: inline-block;
+			}
+			
+			form {
+				max-width: 600px;
+				margin: 0 auto;
+			}
+			
+			.fields {
+				display: grid;
+				gap: 1rem;
+			}
+			
+			.field.half {
+				grid-column: span 1;
+			}
+			
+			.field {
+				grid-column: span 2;
+			}
+			
+			input, textarea {
+				width: 100%;
+				padding: 0.8rem;
+				background: rgba(255,255,255,0.1);
+				border: 1px solid rgba(255,255,255,0.3);
+				border-radius: 4px;
+				color: white;
+			}
+			
+			input::placeholder, textarea::placeholder {
+				color: rgba(255,255,255,0.6);
+			}
+			
+			.copyright {
+				text-align: center;
+				padding: 2rem;
+				color: rgba(255,255,255,0.5);
+				border-top: 1px solid rgba(255,255,255,0.1);
+			}
+			
+			.items {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+				gap: 2rem;
+				list-style: none;
+				margin: 2rem 0;
+			}
+			
+			.items h3 {
+				color: #e37b7c;
+				margin-bottom: 0.5rem;
+			}
+			
+			.icons {
+				list-style: none;
+				display: flex;
+				gap: 1rem;
+				justify-content: center;
+			}
+			
+			.icons a {
+				color: rgba(255,255,255,0.7);
+				text-decoration: none;
+				font-size: 1.2rem;
+			}
+			
+			.icons a:hover {
+				color: #e37b7c;
+			}
+			
+			@media (max-width: 768px) {
+				.intro h1 {
+					font-size: 2rem;
+				}
+				
+				.fields {
+					grid-template-columns: 1fr;
+				}
+				
+				.field.half {
+					grid-column: span 1;
+				}
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1>Sofia Portfolio</h1>
+							<p>Bienvenidos a mi portafolio de fotografía y diseño</p>
+							<ul class="actions">
+								<li><a href="#first" class="button primary">Ver Trabajos</a></li>
+							</ul>
+						</header>
+					</section>
+
+				<!-- Section -->
+					<section id="first">
+						<header>
+							<h2>Sobre mi trabajo</h2>
+						</header>
+						<div class="content">
+							<p><strong>Captura momentos únicos</strong> a través de mi lente. Especializada en fotografía creativa, retratos y diseño visual. Cada imagen cuenta una historia única y auténtica.</p>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>Servicios</h2>
+						</header>
+						<div class="content">
+							<p><strong>Ofrezco diferentes tipos de servicios fotográficos</strong> adaptados a tus necesidades.</p>
+							<ul class="feature-icons">
+								<li>📸 Fotografía de retrato</li>
+								<li>⚡ Sesiones rápidas</li>
+								<li>🎨 Edición creativa</li>
+								<li>⚙️ Post-producción</li>
+								<li>📍 Sesiones en locación</li>
+								<li>💻 Diseño digital</li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>Galería de trabajos</h2>
+						</header>
+						<div class="content">
+							<p><strong>Algunos de mis trabajos recientes</strong> que muestran mi estilo y calidad.</p>
+
+							<!-- Gallery -->
+							<div class="gallery">
+								<img src="imagenes/cama.jpg" alt="Trabajo 1" />
+								<img src="imagenes/878.jpg" alt="Trabajo 2" />
+								<img src="imagenes/cici.jpg" alt="Trabajo 3" />
+								<img src="imagenes/iloi.jpg" alt="Trabajo 4" />
+								<img src="imagenes/iu.jpg" alt="Trabajo 5" />
+								<img src="imagenes/li.jpg" alt="Trabajo 6" />
+								<img src="imagenes/m.jpg" alt="Trabajo 7" />
+								<img src="imagenes/mkmk.jpg" alt="Trabajo 8" />
+								<img src="imagenes/nj.jpg" alt="Trabajo 9" />
+								<img src="imagenes/tt.jpg" alt="Trabajo 10" />
+								<img src="imagenes/we.jpg" alt="Trabajo 11" />
+								<img src="imagenes/wer.jpg" alt="Trabajo 12" />
+							</div>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>¿Listo para trabajar juntos?</h2>
+						</header>
+						<div class="content">
+							<p><strong>Contacta conmigo</strong> para discutir tu próximo proyecto fotográfico.</p>
+							<ul class="actions">
+								<li><a href="#contact" class="button primary large">Empezar proyecto</a></li>
+								<li><a href="#about" class="button large">Conocer más</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Contact Section -->
+					<section id="contact">
+						<header>
+							<h2>Contacto</h2>
+						</header>
+						<div class="content">
+							<p><strong>Hablemos</strong> sobre tu próximo proyecto y cómo puedo ayudarte a crear imágenes increíbles.</p>
+							<form>
+								<div class="fields">
+									<div class="field half">
+										<input type="text" name="name" id="name" placeholder="Tu nombre" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Tu email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Cuéntame sobre tu proyecto..." rows="7"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Enviar mensaje" class="button primary" /></li>
+								</ul>
+							</form>
+						</div>
+						<footer>
+							<ul class="items">
+								<li>
+									<h3>Email</h3>
+									<a href="#">sofia@portfolio.com</a>
+								</li>
+								<li>
+									<h3>Teléfono</h3>
+									<a href="#">+52 (xxx) xxx-xxxx</a>
+								</li>
+								<li>
+									<h3>Ubicación</h3>
+									<span>Ciudad de México, México</span>
+								</li>
+								<li>
+									<h3>Redes sociales</h3>
+									<ul class="icons">
+										<li><a href="#">📘 Facebook</a></li>
+										<li><a href="#">📷 Instagram</a></li>
+										<li><a href="#">🐦 Twitter</a></li>
+										<li><a href="#">💼 LinkedIn</a></li>
+									</ul>
+								</li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Copyright -->
+					<div class="copyright">&copy; 2025 Sofia Portfolio. Todos los derechos reservados.</div>
+
+			</div>
+
+	</body>
+</html>
