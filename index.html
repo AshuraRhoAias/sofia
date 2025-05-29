@@ -7,10 +7,7 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.sync.min.js"></script>
-
-	<!-- Iconos SVG embebidos - Sin dependencias externas -->
 
 	<!-- Global CSS -->
 	<link rel="stylesheet" href="asset/global.css" />
@@ -221,18 +218,24 @@
 								<li>
 									<h3>Elsewhere</h3>
 									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span
-													class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span
-													class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span
-													class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-linkedin-in"><span
-													class="label">LinkedIn</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span
-													class="label">GitHub</span></a></li>
-										<li><a href="#" class="icon brands fa-codepen"><span
-													class="label">Codepen</span></a></li>
+										<li><a href="#" class="social-link">
+												<img src="imagenes/twitter.png" alt="Twitter" class="social-icon" />
+												<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="social-link">
+												<img src="imagenes/facebook.jpg" alt="Facebook" class="social-icon" />
+												<span class="label">Facebook</span></a></li>
+										<li><a href="#" class="social-link">
+												<img src="imagenes/insta.jpg" alt="Instagram" class="social-icon" />
+												<span class="label">Instagram</span></a></li>
+										<li><a href="#" class="social-link">
+												<img src="imagenes/link.png" alt="LinkedIn" class="social-icon" />
+												<span class="label">LinkedIn</span></a></li>
+										<li><a href="#" class="social-link">
+												<img src="imagenes/git.png" alt="GitHub" class="social-icon" />
+												<span class="label">GitHub</span></a></li>
+										<li><a href="#" class="social-link">
+												<img src="imagenes/codepen.png" alt="Codepen" class="social-icon" />
+												<span class="label">Codepen</span></a></li>
 									</ul>
 								</li>
 							</ul>
@@ -514,23 +517,6 @@
 						}
 					}
 					
-					// Iconos SVG
-					.icon-svg {
-						display: inline-flex;
-						align-items: center;
-						justify-content: center;
-						margin-right: 1rem;
-						min-width: 2rem;
-						font-size: 1.5rem;
-						color: $color-accent;
-						
-						svg {
-							width: 1.5em;
-							height: 1.5em;
-							fill: currentColor;
-						}
-					}
-					
 					// Iconos de características
 					.feature-icons {
 						display: grid;
@@ -753,41 +739,44 @@
 							font-weight: 600;
 						}
 						
+						// Iconos sociales con imágenes
 						.icons {
 							list-style: none;
 							display: flex;
 							gap: 1rem;
 							padding: 0;
 							margin: 0;
+							flex-wrap: wrap;
 							
-							a {
+							.social-link {
 								display: flex;
 								align-items: center;
 								justify-content: center;
-								width: 45px;
-								height: 45px;
+								width: 50px;
+								height: 50px;
 								background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%);
-								color: #666;
 								border-radius: 50%;
 								text-decoration: none;
 								@include vendor(transition, all 0.3s ease);
 								box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+								padding: 8px;
 								
 								&:hover {
 									background: linear-gradient(135deg, $color-accent 0%, lighten($color-accent, 10%) 100%);
-									color: #ffffff;
 									@include vendor(transform, translateY(-3px));
 									box-shadow: 0 4px 15px rgba($color-accent, 0.3);
 								}
 								
-								.icon-svg {
-									margin: 0;
-									min-width: auto;
-									
-									svg {
-										width: 20px;
-										height: 20px;
-									}
+								.social-icon {
+									width: 28px;
+									height: 28px;
+									object-fit: cover;
+									border-radius: 50%;
+									@include vendor(transition, all 0.3s ease);
+								}
+								
+								&:hover .social-icon {
+									@include vendor(transform, scale(1.2));
 								}
 								
 								.label {
@@ -872,6 +861,22 @@
 							width: 100%;
 							height: auto;
 							overflow-y: visible;
+						}
+						
+						// Ajustes para iconos sociales en móvil
+						footer .icons {
+							justify-content: center;
+							
+							.social-link {
+								width: 45px;
+								height: 45px;
+								
+								.social-icon {
+									width: 24px;
+									height: 24px;
+									border-radius: 50%;
+								}
+							}
 						}
 					}
 					
